@@ -23,7 +23,11 @@ describe('chirp model', () => {
     return request(app)
       .get('/random')
       .then(res => {
-        expect(res.body).toHaveLength(1);
+        expect(res.body).toEqual({
+          text: expect.any(String),
+          _id: expect.any(String),
+          __v: 0
+        });
       });
   });
 });
