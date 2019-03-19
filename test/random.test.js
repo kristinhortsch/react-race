@@ -19,7 +19,7 @@ describe('chirp model', () => {
     mongoose.connection.close(done);
   });
 
-  it('gets a list of all chirps', () => {
+  it('gets a quote', () => {
     return request(app)
       .get('/random')
       .then(res => {
